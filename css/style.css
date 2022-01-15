@@ -79,6 +79,15 @@ nav {
   font-weight: 600;
   font-family: Poppins;
   line-height: 100px;
+  transition: all linear .3s;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+}
+
+.menu ul li:hover a {
+  color: #f82011e0;
 }
 
 /* ================================
@@ -117,9 +126,19 @@ nav {
   font-weight: 500;
   font-size: 16px;
   padding: 10px 24px;
-  background: #f1310fde;
+  background: #06688fcc;
   border-radius: 41px;
   line-height: 10px;
+  transition: all linear .3s;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+}
+
+.button:hover {
+  color: #d3eccd;
+  background: #f82011e0;
 }
 
 .button i {
@@ -237,12 +256,112 @@ nav {
 }
 
 .button-see-more a {
-  color: #f1310fde;
+  color: #06688fcc;
   font-size: 16px;
   font-weight: 700;
   position: right;
 }
+.button-see-more:hover a{
+  color: #f82011e0;
+}
 
 /* ================================
     Popular Collection part End
+================================ */
+/* ================================
+        Blogs part Start
+================================ */
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.blog {
+  width: 310px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
+}
+
+.blog-details p {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all linear .3s;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+}
+
+.blog-details:hover p {
+  color: #e40215c9;
+}
+
+.blog-details:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+/* ================================
+        Blogs part End
+================================ */
+
+
+
+/* ================================
+      Footer part start
+================================ */
+footer {
+  background-color: #0a0826;
+  margin-top: 50px;
+}
+
+#footer-part {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.footer-text h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+.footer-text h4,
+p {
+  color: #D9DBE1;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  padding-top: 5px;
+}
+
+.footer-icon a i {
+  width: 32px;
+  height: 32px;
+  line-height: 32PX;
+  color: #ffffff;
+  background-color: #22231C;
+  margin: 10px 6px 0px 6px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* ================================
+      Footer part start
 ================================ */
