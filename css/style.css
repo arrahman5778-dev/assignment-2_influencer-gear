@@ -36,9 +36,10 @@ ul {
 }
 
 .container {
-  width: 1180px;
+  width: 1100px;
   margin: 0 auto;
 }
+
 
 /* ================================
     Common CSS/ Utilities End
@@ -55,29 +56,31 @@ header {
   color: #3A3A3A;
   font-size: 24px;
   font-weight: 700;
-  font-family: Poppins;
+
   line-height: 100px;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
 }
 
 .menu ul {
   display: flex;
+  justify-content: right;
 }
 
 .menu ul li {
-  margin: 0 16px;
+  margin: 0 10px;
+
+  float: right;
 }
 
 .menu ul li a {
   color: #3A3A3A;
   font-size: 16px;
   font-weight: 600;
-  font-family: Poppins;
   line-height: 100px;
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -89,7 +92,9 @@ nav {
 .menu ul li:hover a {
   color: #f82011e0;
 }
-
+@keyframes bounce {
+  
+}
 /* ================================
        Nav/Menu part End
 ================================ */
@@ -98,11 +103,13 @@ nav {
      Hero/Bannerpart Start
 ================================ */
 .banner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 500px 300px;
+  grid-column-gap: 50px;
 }
 
 .banner-text {
-  width: 50%;
+  /* width: 50%; */
   padding-top: 80px;
 }
 
@@ -145,21 +152,6 @@ nav {
   padding-left: 8px;
 }
 
-.banner-img {
-  margin-right: 60px;
-}
-
-.cemara-circel {
-  position: relative;
-  margin-left: 130px;
-
-}
-
-.cemara {
-  position: absolute;
-  top: 120px;
-  right: 75px;
-}
 
 .marketplace {
   margin-top: 50px;
@@ -210,13 +202,30 @@ nav {
   border-radius: 5px;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.15);
 }
+.product-img {
+  transition: all linear .3s;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+  overflow: hidden;
+}
+
+.product:hover .product-img img {
+  transform: scale(1.2);
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+}
 
 .product-details .product-name {
   color: #18191F;
   font-size: 28px;
   font-weight: 500;
   padding-top: 10PX;
-
+  
 }
 
 .product-details .price {
@@ -261,7 +270,8 @@ nav {
   font-weight: 700;
   position: right;
 }
-.button-see-more:hover a{
+
+.button-see-more:hover a {
   color: #f82011e0;
 }
 
@@ -318,6 +328,7 @@ nav {
       Footer part start
 ================================ */
 footer {
+
   background-color: #0a0826;
   margin-top: 50px;
 }
@@ -365,3 +376,124 @@ p {
 /* ================================
       Footer part start
 ================================ */
+
+/*================================
+Media query tablet Start
+================================ */
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+
+  header {
+    height: 0;
+  }
+
+  .heading-name {
+    font-size: 30px;
+  }
+
+  nav {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menu ul {
+    display: none;
+  }
+
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .banner-text h1 {
+    font-size: 50px;
+    padding-top: 10px;
+  }
+
+  .marketplace {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .marketplace-logo {
+    padding: 0px 20px;
+
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================
+  Media query tablet End
+  ================================ */
+
+
+
+/* ================================
+        Media query Mobile start
+  /* ================================ */
+
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+
+  header {
+    height: 0;
+  }
+
+  nav {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menu ul {
+    display: none;
+  }
+
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .banner-text h1 {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+
+  .marketplace {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .marketplace-logo {
+    padding: 0px 20px;
+
+  }
+
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+/* ================================
+        Media query Mobile End
+  ================================ */
+/* 
